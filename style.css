@@ -1,0 +1,116 @@
+/* ===== Reset ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* ===== Body ===== */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* ===== Header ===== */
+
+#header {
+    background: linear-gradient(to right, #4a90e2, #6a5acd);
+    color: white;
+    padding: 20px;
+}
+
+
+/* ===== Navigation ===== */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+    text-decoration: underline;
+}
+
+.active {
+    background-color: white;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+/* ===== Main ===== */
+
+main {
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* ===== Table ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+    background-color: #dfefff;
+}
+
+
+/* ===== Aside ===== */
+
+#contact {
+    padding: 20px;
+}
+
+
+/* ===== Footer ===== */
+
+footer {
+    background-color: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
