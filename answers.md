@@ -246,3 +246,66 @@ Tạo file:
 index.html
 style.css
 
+## CSS Specificity Answers
+
+### 1. Danh sách 10 rules + specificity score
+
+| Rule | Specificity |
+|------|-------------|
+| p | 0,0,1 |
+| .text | 0,1,0 |
+| .highlight | 0,1,0 |
+| p.text | 0,1,1 |
+| p.highlight | 0,1,1 |
+| .text.highlight | 0,2,0 |
+| p.text.highlight | 0,2,1 |
+| #demo | 1,0,0 |
+| p#demo | 1,0,1 |
+| p#demo.text.highlight | 1,2,1 |
+
+---
+
+### 2. Element cuối cùng hiển thị màu gì? Tại sao?
+
+Element cuối cùng hiển thị màu GOLD.
+
+Lý do:
+Rule:
+
+p#demo.text.highlight {
+    color: gold;
+}
+
+có specificity cao nhất là:
+
+1,2,1
+
+Nó mạnh hơn tất cả các rules còn lại nên trình duyệt sẽ áp dụng màu gold.
+
+---
+
+### 3. Screenshot kết quả
+
+(Chèn ảnh screenshot tại đây)
+
+---
+
+### 4. Thay đổi thứ tự rules trong CSS file. Kết quả có đổi không? Giải thích.
+
+Kết quả KHÔNG đổi nếu rule có specificity cao nhất vẫn tồn tại.
+
+Trong CSS:
+- Rule có specificity cao hơn sẽ được ưu tiên.
+- Thứ tự chỉ quan trọng khi specificity bằng nhau.
+
+Ví dụ:
+.text và .highlight đều có specificity:
+0,1,0
+
+Khi đó rule viết sau sẽ thắng.
+
+Nhưng:
+p#demo.text.highlight có specificity:
+1,2,1
+
+nên dù đặt ở đầu file hay cuối file thì nó vẫn thắng tất cả rules khác.
